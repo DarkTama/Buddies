@@ -29,7 +29,8 @@ public abstract class BuddiesBiomeGenerator extends BiomeGenerator implements Bu
 	}
 	
 	@Override
-	public void generate(CuboidBlockMaterialBuffer blockData, int chunkX, int chunkY, int chunkZ, World world) {
+	public void generate(CuboidBlockMaterialBuffer blockData, World world) {
+		final int chunkY = blockData.getBaseChunkY();
 		if (chunkY < 0) {
 			if (voidBelowZero) {
 				blockData.flood(BuddiesMaterials.AIR);
@@ -37,7 +38,7 @@ public abstract class BuddiesBiomeGenerator extends BiomeGenerator implements Bu
 				blockData.flood(BuddiesMaterials.STONE);
 			}
 		} else {
-			super.generate(blockData, chunkX, chunkY, chunkZ, world);
+			super.generate(blockData, world);
 		}
 	}
 	

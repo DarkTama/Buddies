@@ -14,17 +14,6 @@
 		<spoutVersion>1.0.0-SNAPSHOT</spoutVersion>
 	</properties>
 
-	<repositories>
-		<repository>
-			<id>spout-repo</id>
-			<url>http://nexus.spout.org/content/groups/public</url>
-			<snapshots>
-				<enabled>true</enabled>
-				<updatePolicy>always</updatePolicy>
-			</snapshots>
-		</repository>
-	</repositories>
-
 	<dependencies>
 		<dependency>
 			<groupId>org.spout</groupId>
@@ -77,8 +66,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.1</version>
 				<configuration>
-					<source>1.6</source>
-					<target>1.6</target>
+					<source>1.8</source>
+					<target>1.8</target>
 				</configuration>
 			</plugin>
 			<plugin>
